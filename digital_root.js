@@ -4,7 +4,7 @@ var num = 493193;
 
 function digital_root(n) {
   var total = 0;
-  var numArray = n.toString().split("")
+  var numArray = n.toString().split("");
   if (numArray.length === 1){
     var newNum = n;
     return newNum;
@@ -14,7 +14,7 @@ function digital_root(n) {
       var val = Number(numArray[i]);
       total += val;
     }
-  return digital_root(total)
+  return digital_root(total);
   }
 }
 
