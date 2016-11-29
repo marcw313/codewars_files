@@ -1,20 +1,19 @@
-
-var num = 493193;
+var num = 16;
 
 
 function digital_root(n) {
-  var total = 0;
-  var numArray = n.toString().split("");
+
+  var numArray = n.toString().split(""); //split number into array of single digits
   if (numArray.length === 1){
-    var newNum = n;
-    return newNum;
+    return Number(numArray[0]);
   }
   else{
+    var total = 0; //re-init var each time you run function else block
     for (i = 0; i < numArray.length; i++){
       var val = Number(numArray[i]);
       total += val;
     }
-  return digital_root(total);
+  return digital_root(total); //recursive portion. Call digital_root again on previous total
   }
 }
 
